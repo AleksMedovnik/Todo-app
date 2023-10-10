@@ -4,6 +4,7 @@ go get -u github.com/jmoiron/sqlx
 go get -u github.com/lib/pq
 go get -u github.com/joho/godotenv
 go get -u github.com/sirupsen/logrus
+go get -u github.com/dgrijalva/jwt-go
 
 go run cmd/main.go
 
@@ -26,4 +27,12 @@ psql -U postgres
 exit
 
 
+// registration
+http://localhost:8000/auth/sign-up/
 
+// authentication
+http://localhost:8000/auth/sign-in/
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTcwMTQ2MzQsImlhdCI6MTY5Njk3MTQzNCwidXNlcl9pZCI6MX0.bKh5kdh0dNTPRjfcMUD_dP-ygJxV7mfMpCn3W6a5JBw"
+}
