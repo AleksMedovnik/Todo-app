@@ -7,7 +7,6 @@ go get -u github.com/sirupsen/logrus
 go get -u github.com/dgrijalva/jwt-go
 
 go run cmd/main.go
-
 docker run --name=todo-db -e POSTGRES_PASSWORD=1318 -p 5436:5432 -d --rm postgres  
 
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -28,11 +27,19 @@ exit
 
 
 // registration
+POST:
 http://localhost:8000/auth/sign-up/
 
+
 // authentication
+POST:
 http://localhost:8000/auth/sign-in/
 
 {
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTcwMTQ2MzQsImlhdCI6MTY5Njk3MTQzNCwidXNlcl9pZCI6MX0.bKh5kdh0dNTPRjfcMUD_dP-ygJxV7mfMpCn3W6a5JBw"
 }
+
+
+// 
+POST:
+http://localhost:8000/api/lists/
